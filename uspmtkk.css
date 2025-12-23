@@ -1,0 +1,192 @@
+* {
+      box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+          min-height: 100vh;
+
+            display: flex;
+              justify-content: center;
+                align-items: center;
+
+                  font-family: 'Poppins', sans-serif;
+                    overflow: hidden;
+                    }
+
+                    #bg-video {
+                      position: fixed;
+                        inset: 0;
+                          width: 100%;
+                            height: 100%;
+                              object-fit: cover;
+                                z-index: -1;
+                                }
+
+                                button {
+                                  width: 100%;
+                                    height: 46px;
+
+                                      border-radius: 14px;
+                                        border: none;
+
+                                          background: linear-gradient(
+                                              135deg,
+                                                  rgba(180, 200, 255, 0.9),
+                                                      rgba(120, 170, 255, 0.9)
+                                                        );
+
+                                                          color: #0f172a;
+                                                            font-size: 15px;
+                                                              font-weight: 600;
+
+                                                                cursor: pointer;
+                                                                  transition: all 0.25s ease;
+                                                                  }
+
+                                                                  button:hover {
+                                                                    transform: scale(1.02);
+                                                                      filter: brightness(1.05);
+                                                                      }
+
+                                                                      button:active {
+                                                                        transform: scale(0.97);
+                                                                        }
+
+                                                                        .container {
+                                                                          width: 90%;
+                                                                            max-width: 360px;
+
+                                                                              padding: 26px;
+                                                                                border-radius: 18px;
+
+                                                                                  background: rgba(0,0,0,0.45);
+                                                                                    backdrop-filter: blur(12px);
+
+                                                                                      text-align: center;
+                                                                                        color: white;
+
+                                                                                          box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+                                                                                          }
+
+                                                                                          .container h1 {
+                                                                                            font-family: 'Montserrat', sans-serif;
+                                                                                              font-size: 24px;
+                                                                                                margin-bottom: 8px;
+                                                                                                }
+
+                                                                                                .container {
+                                                                                                  position: relative;
+                                                                                                  }
+
+                                                                                                  .container::before {
+                                                                                                    content: "";
+                                                                                                      position: absolute;
+                                                                                                        inset: 0;
+                                                                                                          border-radius: 20px;
+                                                                                                            padding: 1.5px;
+                                                                                                              background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+                                                                                                                -webkit-mask:
+                                                                                                                    linear-gradient(#000 0 0) content-box,
+                                                                                                                        linear-gradient(#000 0 0);
+                                                                                                                          -webkit-mask-composite: xor;
+                                                                                                                                    mask-composite: exclude;
+                                                                                                                                      pointer-events: none;
+                                                                                                                                      }
+
+                                                                                                                                      .container p {
+                                                                                                                                        font-size: 13px;
+                                                                                                                                          opacity: 0.85;
+                                                                                                                                          }
+
+                                                                                                                                          .container {
+                                                                                                                                            border: 2px solid rgba(255,255,255,0.3);
+                                                                                                                                            }
+
+                                                                                                                                            .field {
+                                                                                                                                              width: 100%;
+                                                                                                                                                margin-top: 14px;
+                                                                                                                                                }
+
+                                                                                                                                                .field input {
+                                                                                                                                                  width: 100%;
+                                                                                                                                                    height: 44px;
+
+                                                                                                                                                      padding: 0 14px;
+
+                                                                                                                                                        border-radius: 14px;
+                                                                                                                                                          border: none;
+                                                                                                                                                            outline: none;
+
+                                                                                                                                                              font-size: 14px;
+                                                                                                                                                                background: rgba(255,255,255,0.95);
+                                                                                                                                                                }
+
+                                                                                                                                                                .field button {
+                                                                                                                                                                  background: linear-gradient(
+                                                                                                                                                                      120deg,
+                                                                                                                                                                          #ff9a9e,  
+                                                                                                                                                                              #fda4af,  
+                                                                                                                                                                                  #fad0c4,  
+                                                                                                                                                                                      #fde2e4,  
+                                                                                                                                                                                          #fff1c1,  
+                                                                                                                                                                                              #a1c4fd,  
+                                                                                                                                                                                                  #c2e9fb,  
+                                                                                                                                                                                                      #b8e0d2,  
+                                                                                                                                                                                                          #1f2933  
+                                                                                                                                                                                                              
+                                                                                                                                                                                                                );
+                                                                                                                                                                                                                  background-size: 300% 300%;
+                                                                                                                                                                                                                    animation: gradientMove 6s ease infinite;
+
+                                                                                                                                                                                                                      color: #1e293b;
+                                                                                                                                                                                                                        font-weight: 600;
+                                                                                                                                                                                                                          border-radius: 14px;
+                                                                                                                                                                                                                            border: none;
+                                                                                                                                                                                                                              cursor: pointer;
+                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                              @keyframes gradientMove {
+                                                                                                                                                                                                                                0% { background-position: 0% 50%; }
+                                                                                                                                                                                                                                  50% { background-position: 100% 50%; }
+                                                                                                                                                                                                                                    100% { background-position: 0% 50%; }
+                                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                                    .field button:hover {
+                                                                                                                                                                                                                                      filter: brightness(1.1);
+                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                      .field button:active {
+                                                                                                                                                                                                                                        transform: scale(0.97);
+                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                        .hasil {
+                                                                                                                                                                                                                                          margin-top: 16px;
+                                                                                                                                                                                                                                            font-size: 13px;
+                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                            .watermark {
+                                                                                                                                                                                                                                              margin-top: 14px;
+                                                                                                                                                                                                                                                padding-top: 10px;
+                                                                                                                                                                                                                                                  border-top: 1px solid rgba(255,255,255,0.2);
+                                                                                                                                                                                                                                                    font-size: 11px;
+                                                                                                                                                                                                                                                      color: rgba(255,255,255,0.7);
+                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                      .nama-kelompok {
+                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                          justify-content: space-between;
+                                                                                                                                                                                                                                                            margin-bottom: 6px;
+                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                            .nama-kelompok span {
+                                                                                                                                                                                                                                                              flex: 1;
+                                                                                                                                                                                                                                                                text-align: center;
+                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                .kelas {
+                                                                                                                                                                                                                                          wa                        font-size: 10px;
+                                                                                                                                                                                                                                                                    opacity: 0.8;
+                                                                                                                                                                                                                                                                    }
+}

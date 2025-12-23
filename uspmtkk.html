@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statistika TKJ</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="uspmtkk.css">
+      </head>
+
+      <body>
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source src="bguspmtk.mp4" type="video/mp4">
+              </video>
+                
+                  <audio id="bg-audio" loop>
+                      <source src="aodusp.mp3" type="audio/mpeg">
+                        </audio>
+
+                          <div class="container">
+                              <h1>Statistika Penggunaan Aplikasi</h1>
+                                  <p>Masukkan data durasi penggunaan aplikasi (jam)</p>
+
+                                      <div class="field">
+                                            <input
+                                                    type="text"
+                                                            id="dataInput"
+                                                                    placeholder="Contoh: 1, 1.35, 1.5, 2"
+                                                                          >
+                                                                              </div>
+
+                                                                                  <div class="field">
+                                                                                        <button onclick="startAll()">Hitung</button>
+                                                                                            </div>
+
+                                                                                                <div class="hasil">
+                                                                                                      <p id="mean">Mean: -</p>
+                                                                                                            <p id="median">Median: -</p>
+                                                                                                                  <p id="modus">Modus: -</p>
+                                                                                                                      </div>
+                                                                                                                           <div class="watermark">
+                                                                                                                               <div class="kelas">
+                                                                                                                                   Dibuat oleh : Kelompok 8 · XII TKJ 1
+                                                                                                                                     </div>
+                                                                                                                                      <div class="nama-kelompok">
+                                                                                                                                          <span>M. Aldi Prastya</span>
+                                                                                                                                              <span>Risti Novelisa</span>
+                                                                                                                                                  <span>Nadia Afriani</span>
+                                                                                                                                                    </div>
+                                                                                                                                                      </div>
+
+                                                                                                                                                        <script src="scriptusp.js"></script>
+
+                                                                                                                                                          <script>
+                                                                                                                                                              let audioStarted = false;
+
+                                                                                                                                                                  function startAll() {
+                                                                                                                                                                        hitung();
+
+                                                                                                                                                                              if (!audioStarted) {
+                                                                                                                                                                                      const audio = document.getElementById("bg-audio");
+                                                                                                                                                                                              audio.volume = 0.2;
+                                                                                                                                                                                                      audio.play().then(() => audioStarted = true);
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                                  </script>
+
+                                                                                                                                                                                                                  </body>
+                                                                                                                                                                                                                  </html>
