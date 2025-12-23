@@ -2,74 +2,62 @@
 <html>
 <head>
   <title>Statistika TKJ</title>
+
+  <!-- TAMBAHAN: Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="uspmtkk.css">
-      </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="uspmtkk.css">
+</head>
 
-      <body>
-        <video id="bg-video" autoplay muted loop playsinline>
-            <source src="bguspmtk.mp4" type="video/mp4">
-              </video>
-                
-                  <audio id="bgAudio" loop>
-  <source src="aodusp.mp3" type="audio/mpeg">
-                  </audio>
+<body>
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="bguspmtk.mp4" type="video/mp4">
+  </video>
 
-                          <div class="container">
-                              <h1>Statistika Penggunaan Aplikasi</h1>
-                                  <p>Masukkan data durasi penggunaan aplikasi (jam)</p>
+  <audio id="bgAudio" loop>
+    <source src="aodusp.mp3" type="audio/mpeg">
+  </audio>
 
-                                      <div class="field">
-                                            <input
-                                                    type="text"
-                                                            id="dataInput"
-                                                                    placeholder="Contoh: 1, 1.35, 1.5, 2"
-                                                                          >
-                                                                              </div>
+  <div class="container">
+    <h1>Statistika Penggunaan Aplikasi</h1>
+    <p>Masukkan data durasi penggunaan aplikasi (jam)</p>
 
-                                                                                  <div class="field">
-                                                                                        <button onclick="hitung()">Hitung</button>
-                                                                                            </div>
+    <div class="field">
+      <input type="text" id="dataInput" placeholder="Contoh: 1, 1.35, 1.5, 2">
+    </div>
 
-                                                                                                <div class="hasil">
-                                                                                                   <p id="mean">Mean: ?</p>
-                                                                                                    <p id="median">Median: ?</p>
-                                                                                                     <p id="modus">Modus: ?</p>
-                                                                                                 </div>
-                            <div class="grafik">
-  <canvas id="chartStatistika"></canvas>
-                            </div>
-                            
-                                                                                                                  
-                                                                                                                        <div id="penjelasan" style="margin-top:15px; font-size:14px; text-align:left;"></div>
-                                                                                                                           <div class="watermark">
-                                                                                                                               <div class="kelas">
-                                                                                                                                   Dibuat oleh : Kelompok 8 · XII TKJ 1
-                                                                                                                                     </div>
-                                                                                                                                      <div class="nama-kelompok">
-                                                                                                                                          <span>M. Aldi Prastya</span>
-                                                                                                                                              <span>Risti Novelisa</span>
-                                                                                                                                                  <span>Nadia Afriani</span>
-                                                                                                                                                    </div>
-                                                                                                                                                      </div>
+    <div class="field">
+      <button onclick="hitung()">Hitung</button>
+    </div>
 
-                                                                                                                                                        <script src="scriptusp.js"></script>
+    <div class="hasil">
+      <p id="mean">Mean: ?</p>
+      <p id="median">Median: ?</p>
+      <p id="modus">Modus: ?</p>
+    </div>
 
-                                                                                                                                                          <script>
-                                                                                                                                                              let audioStarted = false;
+    <!-- TAMBAHAN: TEMPAT GRAFIK -->
+    <div class="grafik">
+      <canvas id="chartStatistika"></canvas>
+    </div>
 
-                                                                                                                                                                  function startAll() {
-                                                                                                                                                                        hitung();
+    <div id="penjelasan" style="margin-top:15px; font-size:14px; text-align:left;"></div>
 
-                                                                                                                                                                              if (!audioStarted) {
-                                                                                                                                                                                      const audio = document.getElementById("bg-audio");
-                                                                                                                                                                                              audio.volume = 0.2;
-                                                                                                                                                                                                      audio.play().then(() => audioStarted = true);
-                                                                                                                                                                                                            }
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                                  </script>
+    <div class="watermark">
+      <div class="kelas">
+        Dibuat oleh : Kelompok 8 · XII TKJ 1
+      </div>
+      <div class="nama-kelompok">
+        <span>M. Aldi Prastya</span>
+        <span>Risti Novelisa</span>
+        <span>Nadia Afriani</span>
+      </div>
+    </div>
+  </div>
 
-                                                                                                                                                                                                                  </body>
-                                                                                                                                                                                                                  </html>
+  <!-- JS ASLI KAMU -->
+  <script src="scriptusp.js"></script>
+
+</body>
+</html>
