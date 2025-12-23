@@ -43,7 +43,7 @@ function hitung() {
   `;
 
   // ====== GRAFIK ======
-  const ctx = document.getElementById("usageChart").getContext("2d");
+  const ctx = document.getElementById("chartStatistika").getContext("2d");
 
   if (chart) {
     chart.destroy(); // biar ga numpuk / ilang
