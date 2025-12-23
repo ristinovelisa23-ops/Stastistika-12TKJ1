@@ -1,30 +1,37 @@
 function hitung() {
-      let input = document.getElementById("dataInput").value;
-        let data = input.split(",").map(Number);
+  let input = document.getElementById("dataInput").value;
+  let data = input.split(",").map(x => parseFloat(x.trim())).filter(x => !isNaN(x));
 
-          // Mean
-            let total = data.reduce((a, b) => a + b, 0);
-              let mean = (total / data.length).toFixed(2);
+  if (data.length === 0) {
+    alert("Masukkan data yang valid!");
+    return;
+  }
 
-                // Median
-                  data.sort((a, b) => a - b);
-                    let mid = Math.floor(data.length / 2);
-                      let median = (data[mid - 1] + data[mid]) / 2;
+  // Mean
+  let total = data.reduce((a, b) => a + b, 0);
+  let mean = (total / data.length).toFixed(2);
 
-                        // Modus
-                          let frekuensi = {};
-                            data.forEach(n => frekuensi[n] = (frekuensi[n] || 0) + 1);
-                              let modus = Object.keys(frekuensi).reduce((a, b) =>
-                                  frekuensi[a] > frekuensi[b] ? a : b
-                                    );
+  // Median
+  data.sort((a, b) => a - b);
+  let mid = Math.floor(data.length / 2);
+  let median;
+  if (data.length % 2 === 0) {
+    median = (data[mid - 1] + data[mid]) / 2;
+  } else {
+    median = data[mid];
+  }
 
-                                      document.getElementById("mean").innerText = "Mean (Rata-rata): " + mean + " jam";
-                                        document.getElementById("median").innerText = "Median: " + median + " jam";
-                                          document.getElementById("modus").innerText = "Modus: " + modus + " jam";
-                                          }
+  // Modus
+  let frekuensi = {};
+  data.forEach(n => frekuensi[n] = (frekuensi[n] || 0) + 1);
+  let max = Math.max(...Object.values(frekuensi));
+  let modus = Object.keys(frekuensi).filter(n => frekuensi[n] === max).join(", ");
 
-                                          function playAudio() {
-                                            const audio = document.getElementById("aodusp.mp3");
-                                              audio.play();
-                                              }
+  document.getElementById("mean").innerText = mean + " jam";
+  document.getElementById("median").innerText = median + " jam";
+  document.getElementById("modus").innerText = modus + " jam";
+
+  // PLAY AUDIO
+  const audio = document.getElementById("bgAudio");
+  audio.play();
 }
