@@ -27,9 +27,9 @@ function hitung() {
   let max = Math.max(...Object.values(frekuensi));
   let modus = Object.keys(frekuensi).filter(n => frekuensi[n] === max).join(", ");
 
-  document.getElementById("mean").innerText = mean + " jam";
-  document.getElementById("median").innerText = median + " jam";
-  document.getElementById("modus").innerText = modus + " jam";
+  document.getElementById("mean").innerText = "Mean: " + mean + " jam";
+  document.getElementById("median").innerText = "Median: " + median + " jam";
+  document.getElementById("modus").innerText = "Modus: " + modus + " jam";
 
   // PLAY AUDIO
   const audio = document.getElementById("bgAudio");
