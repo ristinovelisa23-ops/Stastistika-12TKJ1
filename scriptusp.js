@@ -85,5 +85,6 @@ function hitung() {
   });
 
   const audio = document.getElementById("bgAudio");
-  audio.play();
+audio.currentTime = 0;
+audio.play().catch(() => {});
 }
